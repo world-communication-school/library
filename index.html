@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Communication School</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Bebas+Neue&family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=Jersey+10+Charted&family=Madimi+One&family=Poppins:wght@700&family=Quicksand:wght@300..700&family=Sixtyfour&family=Space+Grotesk:wght@300..700&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+    <script src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        html{
+            overflow: hidden;
+        }
+        *{
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+           
+        }a {
+            color: #F2BE5C;
+             text-decoration:underline; 
+        }a:hover{
+            color: #F2BE5C; 
+             text-decoration:underline; 
+            
+        }.link_a{
+          text-decoration:underline; 
+        }
+        .containerr{
+            width: 112px;
+            height: 112px;
+            position: relative;
+           
+        }
+
+        .box1, .box2, .box3{
+            border : 16px solid #F2BE5C;
+            box-sizing : border-box;
+            position : absolute;
+            display : block;
+        }
+        
+        .box1{
+            width: 112px;
+            height: 48px;
+            margin-top: 64px;
+            margin-left: 0px;
+            animation: anime1 4s 0s forwards ease-in-out infinite;
+        }
+        
+        .box2{
+            width: 48px;
+            height: 48px;
+            margin-top: 0px;
+            margin-left: 0px;
+            animation: anime2 4s 0s forwards ease-in-out infinite;
+        }
+        
+        .box3{
+            width: 48px;
+            height: 48px;
+            margin-top: 0px;
+            margin-left: 64px;
+            animation: anime3 4s 0s forwards ease-in-out infinite;
+        }
+        
+        
+        
+        @keyframes anime1 {
+            0%{
+                width: 112px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 0px;
+            }12.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 0px;
+            }25%{
+                width: 48px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 0px;
+            }37.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 0px;
+            }50%{
+                width: 48px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 0px;
+            }62.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 0px;
+            }75%{
+                width: 48px;
+                height: 112px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }87.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }100%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+        }
+
+        @keyframes anime2{
+            0%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left :0px;
+            }12.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left :0px;
+            }25%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }37.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }50%{
+                width: 112px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left :0px;
+            }62.5%{
+                width :48px;
+                height :48px;
+                margin-top :0px;
+                margin-left: 64px;
+            }
+            75%{
+
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 64px;
+            }
+            87.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 64px;
+            }100%{
+
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 64px;
+            }
+        }
+
+        @keyframes anime3{
+            0%{
+                width: 48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left: 64px;
+            }12.5%{
+                width :48px;
+                height: 48px;
+                margin-top: 0px;
+                margin-left :64px;
+            }25%{
+                width: 48px;
+                height: 112px;
+                margin-top: 0px;
+                margin-left: 64px;
+            }37.5%{
+                width :48px;
+                height :48px;
+                margin-top :64px;
+                margin-left :64px;
+            }50%{
+                width :48px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 64px;
+            }62.5%{
+
+                width :48px;
+                height: 48px;
+                margin-top :64px;
+                margin-left :64px;
+            }75%{
+                width: 48px;
+                height :48px;
+                margin-top :64px;
+                margin-left :64px;
+            }
+            87.5%{
+                width: 48px;
+                height: 48px;
+                margin-top: 64px;
+                margin-left: 64px;
+            }100%{
+                width: 112px;
+                height: 48px;
+                margin-top :64px;
+                margin-left :0px;
+            }
+        }
+        #map { 
+            height: 70vw;
+            width:70vw; 
+            
+            border-radius: 10px;
+            border: 1px solid #F2BE5C;
+            box-shadow: 0px 0px 15px 0px #0D0D0D;
+            margin:1.5rem 0 ;
+        }.leaflet-routing-container{
+            display:none;
+        }.leaflet-control-zoom a, .leaflet-popup-content-wrapper, .leaflet-popup-tip{
+            color:#F2BE5C !important;
+            background-color: rgb(22, 22, 22) !important;
+            font-family: 'Marcellus', serif !important;
+            text-align: center;
+        }ul{
+            padding: 0;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 10px 18px;
+            margin : 1.5rem 0px ;
+            box-shadow: 0px 0px 15px 0px #F2BE5C;
+        }ul li {
+            list-style: none;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+            width: 80vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+        }.abutn{
+            width: 80vw; 
+            height:40px; 
+            border-radius: 20px; 
+           
+            background-color: transparent;
+            color: #F2BE5C ;
+            border: 1px solid #F2BE5C;
+            box-shadow: 0px 0px 8px 0px black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navBar{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+          align-items: center;
+          width: 100vw;
+        }.book{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-width: 30vw;
+          max-width: 30vw;
+        }.book_cover{
+          height: 38vw;
+          width: 25vw;
+          border-radius: 5px;
+          border: #0D0D0D 1px solid;
+
+          background-size: cover;
+          background-position: center;
+        }.book_description{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: black;
+        }.book_title{
+          font-weight: 600;
+          text-align: center;
+          font-size: 1rem;
+        }.book_author{
+          font-weight: 200;
+          text-align: center;
+          font-size: .6rem;
+
+        }.books{
+          width: 100vw; 
+          padding: 20px 2vw; 
+          display: flex; 
+          justify-content: space-between;
+        }.pdf_book_con{
+          background-color: rgba(255, 255, 255, 0.281);
+          backdrop-filter: blur(15px);
+          /* width: 100vw;
+          height: 100vh;
+          position: sticky;
+          top: 50%;
+          left: 50%; */
+          transform: translate(-50%);
+          z-index: 10;
+        }
+ 
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div style="position: absolute; top:0; width: 100vw; height: 100vh; backdrop-filter: blur(15px); display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.297); z-index: 6;" id="loader">
+      <div class="containerr">
+          <div class="box1"></div>
+          <div class="box2"></div>
+          <div class="box3"></div>
+      </div>
+  </div>
+    <!-- Loader -->
+
+    <div style="width:100vw; height:fit-content; display:flex; flex-direction: column; align-items: center;  background-color: black; position: relative;">
+      
+      <div style="position: relative; background-image: url('GettyImages-949118068.webp'); background-size: cover; background-position: center;">
+        <div style="position: absolute; top: 0; width: 100%; height: 100%; background: rgb(0,0,0);
+         background: linear-gradient(0deg, rgba(0,0,0,0.99) 0%, rgba(0,0,0,0.938813025210084) 8%, rgba(0,0,0,0.8715861344537815) 17%, rgba(0,0,0,0.5886729691876751) 33%, rgba(0,0,0,0) 100%); z-index: 2;">
+        </div>
+        <div style=" display: flex; flex-direction: column; align-items: center; padding-top: 1.5rem; z-index: 3; position: relative;">
+          <img src="Untitled-2.webp" style="height: 16vh; margin: auto;">
+          <h1 style="width: 100%; margin: auto; text-align: center; color: white; ">WORLD COMMUNICATION SCHOOL</h1>
+          <h1 style="font-weight: 700;font-size: 18px; margin: 1rem; color: white;width:80vw">We turn students into fluent communicators</h1>
+        </div>
+      </div>
+      <!-- pdf books -->
+
+      <!-- Man Watching -->
+      <div class="modal fade" id="ManWatching" tabindex="-1" aria-labelledby="ManWatchingLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="ManWatchingLabel">Man Watching</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <object data="books/Man Watching.pdf" type="application/pdf" width="100%" height="500px">
+                <p>Unable to display PDF file. <a href="books/Man Watching.pdf" download>Download</a> instead.</p>
+              </object>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Winning body Language -->
+       <div class="modal fade" id="WinningbodyLanguage" tabindex="-1" aria-labelledby="WinningbodyLanguageLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="WinningbodyLanguageLabel">Winning Body Language</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <object data="books/Winning Body Language Mark_Bowden.pdf" type="application/pdf" width="100%" height="500px">
+                <p>Unable to display PDF file. <a href="books/Winning Body Language Mark_Bowden.pdf" download>Download</a> instead.</p>
+              </object>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="books/Winning Body Language Mark_Bowden.pdf" download><button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i></button></a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end pdf books -->
+        <div style="width:100vw; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; position: relative; background-color: white;">
+
+            <h1 style="position: absolute; top: 1rem; right: 5vw; width: 75vw; color: #0D0D0D; font-weight: 900; text-align: end;">Our School's Online Library</h1>
+            <img src="Untitled-1.webp" style="width: 100vw; margin-bottom: 20px;" alt="">
+            <p style="padding: 10px 5vw;">Read books online or download to read later, simply by clicking on the cover of the book u like. <b>HAVE FUN!</b></p>
+            <div class="books">
+              <div class="book" >
+                <div class="book_cover" style="background-image: url('books/1.PNG');"  data-bs-toggle="modal" data-bs-target="#ManWatching">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">Man Watching</div>
+                  <div class="book_author">By Desmond Morris</div>
+                </div>
+              </div>
+
+              
+
+                <div class="book">
+                  <div class="book_cover" style="background-image: url('books/2.jpg');" data-bs-toggle="modal" data-bs-target="#WinningbodyLanguage">
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Winning Body Language</div>
+                    <div class="book_author">By Mark Bowden</div>
+                  </div>
+                </div>
+
+                <div class="book">
+                  <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Man Watching</div>
+                    <div class="book_author">By Desmond Morris</div>
+                  </div>
+                </div>
+            </div>
+            <div class="books">
+              <div class="book">
+                <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">Man Watching</div>
+                  <div class="book_author">By Desmond Morris</div>
+                </div>
+              </div>
+
+                <div class="book">
+                  <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Man Watching</div>
+                    <div class="book_author">By Desmond Morris</div>
+                  </div>
+                </div>
+
+                <div class="book">
+                  <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Man Watching</div>
+                    <div class="book_author">By Desmond Morris</div>
+                  </div>
+                </div>
+            </div>
+            <div class="books">
+              <div class="book">
+                <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">Man Watching</div>
+                  <div class="book_author">By Desmond Morris</div>
+                </div>
+              </div>
+
+                <div class="book">
+                  <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Man Watching</div>
+                    <div class="book_author">By Desmond Morris</div>
+                  </div>
+                </div>
+
+                <div class="book">
+                  <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Man Watching</div>
+                    <div class="book_author">By Desmond Morris</div>
+                  </div>
+                </div>
+            </div>
+            <div style="width: 100vw; display: flex; justify-content: center; align-items: center; color: #0D0D0D; margin-bottom: 2rem;">
+              <div style="display: flex;">
+                <h3 style="font-size: 14px;">More books</h3>
+                <h3 style="font-size: 14px;">V</h3>
+              </div>
+            </div>
+        </div>
+        <div style="width: 100vw; position: relative;">
+          <img src="Untitled-11.webp" style="width: 100vw; margin-bottom: 20px;" alt="">
+          <h1 style="position: absolute; top: 1rem; right: 5vw; width: 75vw; color: #ffffff; font-weight: 900; text-align: end;">Suggest a book to our passionate readers</h1>
+
+          <div style="display: flex; flex-direction: column; align-items: center; color: #0D0D0D; margin-top: 2rem;" >
+
+            <div class="form-floating mb-3" style="width: 85vw;">
+              <input type="text" class="form-control" id="bookName" placeholder="my book">
+              <label for="bookName">Book name *</label>
+            </div>
+
+            <div class="form-floating mb-3" style="width: 85vw;">
+              <input type="text" class="form-control" id="bookAuthor" placeholder="the author">
+              <label for="bookAuthor">Author</label>
+            </div>
+
+            <button type="button" class="btn btn-outline-light mb-3">Submit</button>
+          </div>
+
+        </div>
+       
+        <div style="background-color: white; color: #0D0D0D; width: 100vw; padding: 5vw; display: flex; flex-direction: column; align-items: center;">
+          <p style="margin: unset; margin-top: 1rem;">click the buttons below in order to</p>
+          <h1 style="font-weight: 900;  margin-bottom: .5rem;
+          border-bottom: 2px dashed #0D0D0D;
+          border-radius: 10px; padding: 0 15px; ">Contact Us</h1>
+
+          <a href="tel:0662597190" class="abutn m-3" style="text-decoration: none; font-weight: 600; font-size: 20px; background-color: #0D0D0D;"><i class="bi bi-telephone-forward-fill"  style="padding-right:15px; font-size: 20px;"></i><span >+212 662-597190</span></a> 
+
+          <a href="https://api.whatsapp.com/send?phone=+212662597190" class="abutn m-3" style="text-decoration: none; font-weight: 600; font-size: 20px; background-color: #0D0D0D;"><i class="bi bi-whatsapp" style="padding-right:15px; font-size: 20px;"></i><span >+212 662-597190</span></a>         
+
+          <h1 style="font-weight: 900; margin-top: 1.5rem;  margin-bottom: .5rem;
+          border-bottom: 2px dashed #0D0D0D;
+          border-radius: 10px; padding: 0 15px; ">School's Location</h1>
+          <div id="map" style="width:70vw; height:70vw;" class="mb-3"></div>
+        
+        </div>
+        
+
+        
+        
+
+       
+        </div>
+
+        <div style="background-color: #0D0D0D; height: 50px; width: 100vw; color: white; display: flex; justify-content: center; align-items: center; border-top: 1px solid white;">
+
+           <div>By <a href="https://api.whatsapp.com/send?phone=+212606563050" class="link_a">Joezv</a> at <a href="#" class="link_a">W.C.S.</a> | ©2024</div>
+    
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+      
+// HERO SLIDER
+var menu = [];
+    jQuery('.swiper-slide').each( function(index){
+        menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
+    });
+    var interleaveOffset = 0.5;
+    var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        parallax: true,
+       
+        watchSlidesProgress: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        on: {
+            progress: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * interleaveOffset;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-inner").style.transform =
+                    "translate3d(" + innerTranslate + "px, 0, 0)";
+                   
+                }      
+            },
+
+            touchStart: function() {
+              var swiper = this;
+              for (var i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = "";
+              }
+            },
+
+            setTransition: function(speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-inner").style.transition =
+                    speed + "ms";
+                }
+            }
+        }
+    };
+
+    var swiper = new Swiper(".swiper-container", swiperOptions);
+
+    // DATA BACKGROUND IMAGE
+    var sliderBgSetting = $(".slide-bg-image");
+    sliderBgSetting.each(function(indx){
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+
+    var map = L.map('map').setView([34.2213203594818, -4.005855850177873], 15);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href=\"#\" >World communication school</a>'
+            }).addTo(map);
+            var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+                maxZoom: 20,
+                subdomains:['mt0','mt1','mt2','mt3'],
+                scrollWheelZoom: false
+            });
+
+            googleStreets.addTo(map);
+            // var  markerIcon= L.marker([".$vehicule_lat1.", ".$vehicule_lng1."], {icon: markerIcon}).addTo(map).bindPopup('<div style=\"display:flex;justify-content:center;\"> Name: ".$vehicule_marque1." <br/>".$vehicule_immatriculation1."</div>').openPopup();
+            var markerIcon = L.icon({
+                iconUrl: 'localisation.webp',
+                // shadowUrl: 'leaf-shadow.png',
+
+                iconSize:     [30, 'auto'], // size of the icon
+
+                iconAnchor:   [21, 36], // point of the icon which will correspond to marker's location
+
+                popupAnchor:  [-6, -40] // point from which the popup should open relative to the iconAnchor
+            });
+            L.marker([34.2213203594818, -4.005855850177873], {icon: markerIcon}).addTo(map).bindPopup('World Communication School').openPopup();
+
+            $('.leaflet-control-attribution a:first, .leaflet-control-attribution span:first').hide();
+            $('.leaflet-top').addClass('leaflet-bottom');
+            $('.leaflet-top').removeClass('leaflet-top');
+
+            
+            $( window ).on( "load", function() {
+                setTimeout(function() { 
+                    $('#loader').fadeOut();
+                    $('html').css('overflow','scroll');
+                }, 1500);
+            });
+
+      
+    </script>
+</body>
+</html>
