@@ -39,7 +39,7 @@
         }
 
         .box1, .box2, .box3{
-            border : 16px solid #F2BE5C;
+            border : 16px solid #ffffff;
             box-sizing : border-box;
             position : absolute;
             display : block;
@@ -317,14 +317,34 @@
           left: 50%; */
           transform: translate(-50%);
           z-index: 10;
+        }.prev_book_cover{
+          width: 100%;
+          height: 70vh;
+          background-size: cover;
+          background-position: center;
+          border-radius: 10px;
+        }.modal-footer{
+          justify-content: space-around;
+        }.btn-primary{
+          background-color: #F2BE5C;
+          color: #0D0D0D;
+          border: #0D0D0D;
+        }.btn-primary:focus,.btn-primary:hover,.btn-primary:active{
+          background-color: #0D0D0D;
+          color: #F2BE5C;
+          border: #0D0D0D;
+          outline: #0D0D0D;
+          --bs-btn-active-color: #0D0D0D;
+          --bs-btn-active-bg: #F2BE5C;
+          --bs-btn-active-border-color: #F2BE5C;
         }
  
     </style>
 </head>
 <body>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Loader -->
-    <div style="position: absolute; top:0; width: 100vw; height: 100vh; backdrop-filter: blur(15px); display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.297); z-index: 6;" id="loader">
+    <div style="position: absolute; top:0; width: 100vw; height: 100vh; backdrop-filter: blur(36px); display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.297); z-index: 6;" id="loader">
       <div class="containerr">
           <div class="box1"></div>
           <div class="box2"></div>
@@ -356,19 +376,17 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <!-- <iframe src="https://docs.google.com/gview?url=https://world-communication-school.github.io/library/books/Winning Body Language Mark_Bowden.pdf&embedded=true" style="width:100%; height:70vh;" frameborder="0"></iframe> -->
-              <div>
-                <button id="prev">Previous</button>
-                <button id="next">Next</button>
-                &nbsp; &nbsp;
-                <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
-              </div>
+              <img src="covers/1.PNG" alt="" srcset="" style="width: 100%; border-radius: 10px;">
               
-              <canvas id="the-canvas"></canvas>
+             
+             
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <a href="books/Man Watching.pdf" download>
+                <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+              </a>
+             
             </div>
           </div>
         </div>
@@ -383,14 +401,167 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <object data="books/Winning Body Language Mark_Bowden.pdf" type="application/pdf" width="100%" height="500px">
-                <p>Unable to display PDF file. <a href="books/Winning Body Language Mark_Bowden.pdf" download>Download</a> instead.</p>
-              </object>
+              <img src="covers/2.jpg" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+              
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <a href="books/Winning Body Language Mark_Bowden.pdf" download><button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i></button></a>
+              <a href="books/Winning Body Language Mark_Bowden.pdf" download>
+                <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Surrounded by Idiots -->
+      <div class="modal fade" id="surroundedbyidiots" tabindex="-1" aria-labelledby="surroundedbyidiotsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="surroundedbyidiotsLabel">Surrounded by Idiots</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="covers/surroundedbyidiots.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
               
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="books/Surrounded-by-Idiots.pdf" download>
+                <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The-Power-of-Habit -->
+        <div class="modal fade" id="The-Power-of-Habit" tabindex="-1" aria-labelledby="The-Power-of-HabitLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="The-Power-of-HabitLabel">The Power of Habit</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="covers/The-Power-of-Habit.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="books/Charles-Duhigg.The-Power-of-Habit.pdf" download>
+                  <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Who-Will-Cry-When-You-Die -->
+        <div class="modal fade" id="Who-Will-Cry-When-You-Die" tabindex="-1" aria-labelledby="Who-Will-Cry-When-You-DieLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="Who-Will-Cry-When-You-DieLabel">How To Talk Anyone</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="covers/Who-Will-Cry-When-You-Die.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="books/Who-Will-Cry-When-You-Die.pdf" download>
+                  <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- The_4-Hour_Body -->
+         <div class="modal fade" id="The_4-Hour_Body" tabindex="-1" aria-labelledby="The_4-Hour_BodyLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="The_4-Hour_BodyLabel">The 4-Hour Body</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="covers/The_4-Hour_Body.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="books/The_4-Hour_Body.pdf" download>
+                  <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why-We-Sleep -->
+        <div class="modal fade" id="Why-We-Sleep" tabindex="-1" aria-labelledby="Why-We-SleepLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="Why-We-SleepLabel">Why We Sleep</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="covers/Why-We-Sleep.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="books/Why-We-Sleep.pdf" download>
+                <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- quiet -->
+      <div class="modal fade" id="quiet" tabindex="-1" aria-labelledby="quietLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="quietLabel">Quiet</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="covers/quiet.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="books/quiet.pdf" download>
+                <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- So-good-they-cant-ignore-you -->
+      <div class="modal fade" id="So-good-they-cant-ignore-you" tabindex="-1" aria-labelledby="So-good-they-cant-ignore-youLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="So-good-they-cant-ignore-youLabel">So Good They Cant Ignore You</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="covers/So-good-they-cant-ignore-you.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="books/So-good-they-cant-ignore-you.pdf" download>
+                <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+              </a>
             </div>
           </div>
         </div>
@@ -400,10 +571,10 @@
 
             <h1 style="position: absolute; top: 1rem; right: 5vw; width: 75vw; color: #0D0D0D; font-weight: 900; text-align: end;">Our School's Online Library</h1>
             <img src="Untitled-1.webp" style="width: 100vw; margin-bottom: 20px;" alt="">
-            <p style="padding: 10px 5vw;">Read books online or download to read later, simply by clicking on the cover of the book u like. <b>HAVE FUN!</b></p>
+            <p style="padding: 10px 5vw;">Download books to read, simply by clicking on the cover. <b>HAVE FUN!</b></p>
             <div class="books">
-              <div class="book" >
-                <div class="book_cover" style="background-image: url('books/1.PNG');"  data-bs-toggle="modal" data-bs-target="#ManWatching">
+              <div class="book"   data-bs-toggle="modal" data-bs-target="#ManWatching">
+                <div class="book_cover" style="background-image: url('covers/1.PNG');">
 
                 </div>
                 <div class="book_description">
@@ -414,8 +585,8 @@
 
               
 
-                <div class="book">
-                  <div class="book_cover" style="background-image: url('books/2.jpg');" data-bs-toggle="modal" data-bs-target="#WinningbodyLanguage">
+                <div class="book" data-bs-toggle="modal" data-bs-target="#WinningbodyLanguage">
+                  <div class="book_cover" style="background-image: url('covers/2.jpg');" >
 
                   </div>
                   <div class="book_description">
@@ -424,104 +595,118 @@
                   </div>
                 </div>
 
-                <div class="book">
-                  <div class="book_cover" style="background-image: url('books/1.PNG');">
-
+                <div class="book" data-bs-toggle="modal" data-bs-target="#So-good-they-cant-ignore-you">
+                  <div class="book_cover" style="background-image: url('covers/So-good-they-cant-ignore-you.webp');">
+  
                   </div>
                   <div class="book_description">
-                    <div class="book_title">Man Watching</div>
-                    <div class="book_author">By Desmond Morris</div>
+                    <div class="book_title">So Good They Cant Ignore You</div>
+                    <div class="book_author">By Cal Newport</div>
                   </div>
                 </div>
+
             </div>
-            <div class="books">
-              <div class="book">
-                <div class="book_cover" style="background-image: url('books/1.PNG');">
+
+            <div class="books" >
+              <div class="book" data-bs-toggle="modal" data-bs-target="#The-Power-of-Habit">
+                <div class="book_cover" style="background-image: url('covers/The-Power-of-Habit.webp');">
 
                 </div>
                 <div class="book_description">
-                  <div class="book_title">Man Watching</div>
-                  <div class="book_author">By Desmond Morris</div>
+                  <div class="book_title">The Power of Habit</div>
+                  <div class="book_author">By Charles Duhigg</div>
                 </div>
               </div>
 
-                <div class="book">
-                  <div class="book_cover" style="background-image: url('books/1.PNG');">
 
-                  </div>
-                  <div class="book_description">
-                    <div class="book_title">Man Watching</div>
-                    <div class="book_author">By Desmond Morris</div>
-                  </div>
+              <div class="book" data-bs-toggle="modal" data-bs-target="#quiet">
+                <div class="book_cover" style="background-image: url('covers/quiet.webp');">
                 </div>
-
-                <div class="book">
-                  <div class="book_cover" style="background-image: url('books/1.PNG');">
-
-                  </div>
-                  <div class="book_description">
-                    <div class="book_title">Man Watching</div>
-                    <div class="book_author">By Desmond Morris</div>
-                  </div>
+                <div class="book_description">
+                  <div class="book_title">Quiet</div>
+                  <div class="book_author">By Susan Cain</div>
                 </div>
-            </div>
-            <div class="books">
-              <div class="book">
-                <div class="book_cover" style="background-image: url('books/1.PNG');">
+              </div>
+              
+
+              <div class="book"  data-bs-toggle="modal" data-bs-target="#The_4-Hour_Body">
+                <div class="book_cover" style="background-image: url('covers/The_4-Hour_Body.webp');">
 
                 </div>
                 <div class="book_description">
-                  <div class="book_title">Man Watching</div>
-                  <div class="book_author">By Desmond Morris</div>
+                  <div class="book_title">The 4-Hour Body</div>
+                  <div class="book_author">By Timothy Ferriss</div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="books">
+              <div class="book" data-bs-toggle="modal" data-bs-target="#Why-We-Sleep">
+                <div class="book_cover" style="background-image: url('covers/Why-We-Sleep.webp');">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">Why We Sleep</div>
+                  <div class="book_author">By Matthew Walker</div>
                 </div>
               </div>
 
-                <div class="book">
-                  <div class="book_cover" style="background-image: url('books/1.PNG');">
+              <div class="book" data-bs-toggle="modal" data-bs-target="#surroundedbyidiots">
+                <div class="book_cover" style="background-image: url('covers/surroundedbyidiots.webp');" >
 
-                  </div>
-                  <div class="book_description">
-                    <div class="book_title">Man Watching</div>
-                    <div class="book_author">By Desmond Morris</div>
-                  </div>
                 </div>
-
-                <div class="book">
-                  <div class="book_cover" style="background-image: url('books/1.PNG');">
-
-                  </div>
-                  <div class="book_description">
-                    <div class="book_title">Man Watching</div>
-                    <div class="book_author">By Desmond Morris</div>
-                  </div>
+                <div class="book_description">
+                  <div class="book_title">Surrounded By Idiots</div>
+                  <div class="book_author">By Thomas Erikson</div>
                 </div>
+              </div>
+
+              <div class="book"  data-bs-toggle="modal" data-bs-target="#Who-Will-Cry-When-You-Die">
+                <div class="book_cover" style="background-image: url('covers/Who-Will-Cry-When-You-Die.webp');">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">Who Will Cry When You Die</div>
+                  <div class="book_author">By Robin Sharma</div>
+                </div>
+              </div>
+            </div>
+            
+            <div style="width: 100vw;" class="comingsoon">
+              <h1 style="width: 80vw; margin: auto; text-align: center; margin-bottom: 1rem;">More books are coming soon, a suggestion would be helpful btw!</h1>
             </div>
             <div style="width: 100vw; display: flex; justify-content: center; align-items: center; color: #0D0D0D; margin-bottom: 2rem;">
-              <div style="display: flex;">
-                <h3 style="font-size: 14px;">More books</h3>
-                <h3 style="font-size: 14px;">V</h3>
+              <div id="showmore" style="display: flex; justify-content: center; align-items: center; border-bottom: #0D0D0D dashed 1px; border-top: #0D0D0D dashed 1px; border-radius: 10px; padding: 0 10px;">
+                <h3 style="font-size: 14px; margin: 0; margin-right: 1rem;">More books</h3>
+                <i class="bi bi-caret-down" ></i>
               </div>
             </div>
+            <script>
+              $('.comingsoon').hide();
+              $('#showmore').on('click', function(){
+                $('.comingsoon').show(300);
+              })
+            </script>
         </div>
         <div style="width: 100vw; position: relative;">
           <img src="Untitled-11.webp" style="width: 100vw; margin-bottom: 20px;" alt="">
           <h1 style="position: absolute; top: 1rem; right: 5vw; width: 75vw; color: #ffffff; font-weight: 900; text-align: end;">Suggest a book to our passionate readers</h1>
-
+          <form action="https://formsubmit.co/contact.start.service@gmail.com" method="POST">
           <div style="display: flex; flex-direction: column; align-items: center; color: #0D0D0D; margin-top: 2rem;" >
-
             <div class="form-floating mb-3" style="width: 85vw;">
-              <input type="text" class="form-control" id="bookName" placeholder="my book">
-              <label for="bookName">Book name *</label>
+              <input type="text" class="form-control" id="bookName" placeholder="my book" name="bookName">
+              <label for="bookName">Book's name *</label>
             </div>
 
             <div class="form-floating mb-3" style="width: 85vw;">
-              <input type="text" class="form-control" id="bookAuthor" placeholder="the author">
+              <input type="text" class="form-control" id="bookAuthor" placeholder="the author" name="author">
               <label for="bookAuthor">Author</label>
             </div>
 
-            <button type="button" class="btn btn-outline-light mb-3">Submit</button>
+            <button type="submit" class="btn btn-outline-light mb-3">Submit</button>
           </div>
-
+        </form>
         </div>
        
         <div style="background-color: white; color: #0D0D0D; width: 100vw; padding: 5vw; display: flex; flex-direction: column; align-items: center;">
@@ -558,176 +743,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="pdfjs-4.4.168-dist/build/pdf.mjs" type="module"></script>
-  <script type="module">
-    // If absolute URL from the remote server is provided, configure the CORS
-    // header on that server.
-    var url = 'books/Winning Body Language Mark_Bowden.pdf';
-  
-    // Loaded via <script> tag, create shortcut to access PDF.js exports.
-    var { pdfjsLib } = globalThis;
-  
-    // The workerSrc property shall be specified.
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs-4.4.168-dist/build/pdf.worker.mjs';
-  
-    var pdfDoc = null,
-      pageNum = 1,
-      pageRendering = false,
-      pageNumPending = null,
-      scale = 0.8,
-      canvas = document.getElementById('the-canvas'),
-      ctx = canvas.getContext('2d');
-
-  /**
-   * Get page info from document, resize canvas accordingly, and render page.
-   * @param num Page number.
-   */
-  function renderPage(num) {
-    pageRendering = true;
-    // Using promise to fetch the page
-    pdfDoc.getPage(num).then(function(page) {
-      var viewport = page.getViewport({scale: scale});
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-
-      // Render PDF page into canvas context
-      var renderContext = {
-        canvasContext: ctx,
-        viewport: viewport
-      };
-      var renderTask = page.render(renderContext);
-
-      // Wait for rendering to finish
-      renderTask.promise.then(function() {
-        pageRendering = false;
-        if (pageNumPending !== null) {
-          // New page rendering is pending
-          renderPage(pageNumPending);
-          pageNumPending = null;
-        }
-      });
-    });
-
-    // Update page counters
-    document.getElementById('page_num').textContent = num;
-  }
-
-  /**
-   * If another page rendering in progress, waits until the rendering is
-   * finised. Otherwise, executes rendering immediately.
-   */
-  function queueRenderPage(num) {
-    if (pageRendering) {
-      pageNumPending = num;
-    } else {
-      renderPage(num);
-    }
-  }
-
-  /**
-   * Displays previous page.
-   */
-  function onPrevPage() {
-    if (pageNum <= 1) {
-      return;
-    }
-    pageNum--;
-    queueRenderPage(pageNum);
-  }
-  document.getElementById('prev').addEventListener('click', onPrevPage);
-
-  /**
-   * Displays next page.
-   */
-  function onNextPage() {
-    if (pageNum >= pdfDoc.numPages) {
-      return;
-    }
-    pageNum++;
-    queueRenderPage(pageNum);
-  }
-  document.getElementById('next').addEventListener('click', onNextPage);
-
-  /**
-   * Asynchronously downloads PDF.
-   */
-  pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
-    pdfDoc = pdfDoc_;
-    document.getElementById('page_count').textContent = pdfDoc.numPages;
-
-    // Initial/first page rendering
-    renderPage(pageNum);
-  });
-  </script>
-    <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
-      
-// HERO SLIDER
-var menu = [];
-    jQuery('.swiper-slide').each( function(index){
-        menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
-    });
-    var interleaveOffset = 0.5;
-    var swiperOptions = {
-        loop: true,
-        speed: 1000,
-        parallax: true,
-       
-        watchSlidesProgress: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        on: {
-            progress: function() {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    var slideProgress = swiper.slides[i].progress;
-                    var innerOffset = swiper.width * interleaveOffset;
-                    var innerTranslate = slideProgress * innerOffset;
-                    swiper.slides[i].querySelector(".slide-inner").style.transform =
-                    "translate3d(" + innerTranslate + "px, 0, 0)";
-                   
-                }      
-            },
-
-            touchStart: function() {
-              var swiper = this;
-              for (var i = 0; i < swiper.slides.length; i++) {
-                swiper.slides[i].style.transition = "";
-              }
-            },
-
-            setTransition: function(speed) {
-                var swiper = this;
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    swiper.slides[i].style.transition = speed + "ms";
-                    swiper.slides[i].querySelector(".slide-inner").style.transition =
-                    speed + "ms";
-                }
-            }
-        }
-    };
-
-    var swiper = new Swiper(".swiper-container", swiperOptions);
-
-    // DATA BACKGROUND IMAGE
-    var sliderBgSetting = $(".slide-bg-image");
-    sliderBgSetting.each(function(indx){
-        if ($(this).attr("data-background")){
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
-
+   
+  <script>
     var map = L.map('map').setView([34.2213203594818, -4.005855850177873], 15);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
