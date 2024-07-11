@@ -337,6 +337,29 @@
           --bs-btn-active-color: #0D0D0D;
           --bs-btn-active-bg: #F2BE5C;
           --bs-btn-active-border-color: #F2BE5C;
+        }.modal-body > p {
+          margin: 0;
+          margin-top: 1rem;
+          font-size: 12px;
+          font-family: 'ubuntu', Arial, Helvetica, sans-serif;
+          text-align: justify;
+          padding: 0 10px;
+          height: 66px;
+          overflow: hidden;
+          position: relative;
+
+        }.white-faith{
+         
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 66px;
+          background: transparent;
+          background: linear-gradient(0deg, rgba(255,255,255,0.8689600840336135) 0%, rgba(255,255,255,0.6728816526610644) 32%, rgba(255,255,255,0) 100%);
+
+        }.sh3, .sh4, .sh5, .sh6{
+          display: none;
         }
  
     </style>
@@ -367,6 +390,297 @@
       </div>
       <!-- pdf books -->
 
+      
+      <!-- dont-believe-everything-you-think -->
+      <div class="modal fade" id="dont-believe-everything-you-think" tabindex="-1" aria-labelledby="dont-believe-everything-you-thinkLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-body">
+              <img src="covers/dont-believe-everything-you-think.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+              <p id="dont-believe-everything-you-think_text" >Why read 'Don't Believe Everything You Think'? It challenges your assumptions, shows how thoughts shape beliefs and actions, and offers practical wisdom for clearer thinking and mindful living. It's a must-read for anyone seeking insight into their own mind and a deeper understanding of the world around them.
+                <span class="white-faith"></span>
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="dont-believe-everything-you-think_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+              </div>
+              <script >
+                $('#dont-believe-everything-you-think_btn').on("click", function(){
+                  if ($('#dont-believe-everything-you-think_text').hasClass('shown')) {
+                    $('#dont-believe-everything-you-think_text').removeClass('shown');
+                    $('#dont-believe-everything-you-think_text span').css('display', 'block')
+                    $('#dont-believe-everything-you-think_text').css({
+                      "height":"66px",
+                      "overflow":"hidden"
+                    });
+                    $('#dont-believe-everything-you-think_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                  }else{
+                    $('#dont-believe-everything-you-think_text').addClass('shown');
+                    $('#dont-believe-everything-you-think_text span').css('display', 'none')
+                    $('#dont-believe-everything-you-think_text').css({
+                      "height":"fit-content",
+                      "overflow":"unset"
+                    });
+                    $('#dont-believe-everything-you-think_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                  }
+                
+                })
+              </script>
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="books/dont-believe-everything-you-think.pdf" download>
+                <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+              </a>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+         <!-- unfuck-yourself -->
+         <div class="modal fade" id="unfuck-yourself" tabindex="-1" aria-labelledby="unfuck-yourselfLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+  
+              <div class="modal-body">
+                <img src="covers/unfuck-yourself.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+                <p id="unfuck-yourself_text" >"Unfu*k Yourself" is a straightforward guide to taking charge of your life and overcoming self-doubt. With blunt advice and actionable strategies, it empowers you to break free from negative patterns, embrace change, and pursue your goals with renewed confidence. This book is essential for anyone ready to transform their mindset and create a life they truly desire.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="unfuck-yourself_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#unfuck-yourself_btn').on("click", function(){
+                    if ($('#unfuck-yourself_text').hasClass('shown')) {
+                      $('#unfuck-yourself_text').removeClass('shown');
+                      $('#unfuck-yourself_text span').css('display', 'block')
+                      $('#unfuck-yourself_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#unfuck-yourself_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#unfuck-yourself_text').addClass('shown');
+                      $('#unfuck-yourself_text span').css('display', 'none')
+                      $('#unfuck-yourself_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#unfuck-yourself_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
+               
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="books/unfuck-yourself.pdf" download>
+                  <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+                </a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  <!-- the-mountain-is-you -->
+  <div class="modal fade" id="the-mountain-is-you" tabindex="-1" aria-labelledby="the-mountain-is-youLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <img src="covers/the-mountain-is-you.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+          <p id="the-mountain-is-you_text" >"The Mountain Is You" is a profound exploration of personal growth and inner strength. Through insightful reflections and practical guidance, it empowers you to conquer self-limiting beliefs, face challenges head-on, and discover your true potential. This book is a valuable resource for anyone on a journey of self-discovery and empowerment, offering transformative insights to navigate life's peaks and valleys with resilience and clarity.
+            <span class="white-faith"></span>
+          </p>
+          <div style="width: 100%; display: flex; justify-content: center;">
+            <div id="the-mountain-is-you_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+          </div>
+          <script >
+            $('#the-mountain-is-you_btn').on("click", function(){
+              if ($('#the-mountain-is-you_text').hasClass('shown')) {
+                $('#the-mountain-is-you_text').removeClass('shown');
+                $('#the-mountain-is-you_text span').css('display', 'block')
+                $('#the-mountain-is-you_text').css({
+                  "height":"66px",
+                  "overflow":"hidden"
+                });
+                $('#the-mountain-is-you_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+              }else{
+                $('#the-mountain-is-you_text').addClass('shown');
+                $('#the-mountain-is-you_text span').css('display', 'none')
+                $('#the-mountain-is-you_text').css({
+                  "height":"fit-content",
+                  "overflow":"unset"
+                });
+                $('#the-mountain-is-you_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+              }
+            
+            })
+          </script>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="books/the-mountain-is-you.pdf" download>
+            <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+          </a>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- get-out-of-your-head -->
+    <div class="modal fade" id="get-out-of-your-head" tabindex="-1" aria-labelledby="get-out-of-your-headLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+  
+          <div class="modal-body">
+            <img src="covers/get-out-of-your-head.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+            <p id="get-out-of-your-head_text" >"Get Out of Your Head" is a practical guide to breaking free from overthinking and self-doubt. With actionable steps and relatable anecdotes, it helps you reclaim control over your thoughts, focus on the present, and cultivate a more positive mindset. This book is essential for anyone seeking to quiet their inner critic and live a more fulfilling life with greater mental clarity.
+              <span class="white-faith"></span>
+            </p>
+            <div style="width: 100%; display: flex; justify-content: center;">
+              <div id="get-out-of-your-head_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+            </div>
+            <script >
+              $('#get-out-of-your-head_btn').on("click", function(){
+                if ($('#get-out-of-your-head_text').hasClass('shown')) {
+                  $('#get-out-of-your-head_text').removeClass('shown');
+                  $('#get-out-of-your-head_text span').css('display', 'block')
+                  $('#get-out-of-your-head_text').css({
+                    "height":"66px",
+                    "overflow":"hidden"
+                  });
+                  $('#get-out-of-your-head_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                }else{
+                  $('#get-out-of-your-head_text').addClass('shown');
+                  $('#get-out-of-your-head_text span').css('display', 'none')
+                  $('#get-out-of-your-head_text').css({
+                    "height":"fit-content",
+                    "overflow":"unset"
+                  });
+                  $('#get-out-of-your-head_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                }
+              
+              })
+            </script>
+           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="books/get-out-of-your-head.pdf" download>
+              <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+            </a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- cant-hurt-me -->
+     <div class="modal fade" id="cant-hurt-me" tabindex="-1" aria-labelledby="cant-hurt-meLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+  
+          <div class="modal-body">
+            <img src="covers/cant-hurt-me.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+            <p id="cant-hurt-me_text" >"Can't Hurt Me" is an inspiring memoir by David Goggins, detailing his journey from a troubled upbringing to becoming a Navy SEAL and ultramarathon runner. Through raw honesty and relentless perseverance, Goggins shares powerful lessons on overcoming adversity, pushing through pain, and unlocking one's full potential. This book is a testament to the resilience of the human spirit and is a must-read for anyone looking to break barriers and achieve extraordinary goals.
+              <span class="white-faith"></span>
+            </p>
+            <div style="width: 100%; display: flex; justify-content: center;">
+              <div id="cant-hurt-me_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+            </div>
+            <script >
+              $('#cant-hurt-me_btn').on("click", function(){
+                if ($('#cant-hurt-me_text').hasClass('shown')) {
+                  $('#cant-hurt-me_text').removeClass('shown');
+                  $('#cant-hurt-me_text span').css('display', 'block')
+                  $('#cant-hurt-me_text').css({
+                    "height":"66px",
+                    "overflow":"hidden"
+                  });
+                  $('#cant-hurt-me_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                }else{
+                  $('#cant-hurt-me_text').addClass('shown');
+                  $('#cant-hurt-me_text span').css('display', 'none')
+                  $('#cant-hurt-me_text').css({
+                    "height":"fit-content",
+                    "overflow":"unset"
+                  });
+                  $('#cant-hurt-me_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                }
+              
+              })
+            </script>
+           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="books/cant-hurt-me.pdf" download>
+              <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+            </a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+         <!-- how-to-listen-with-intention -->
+         <div class="modal fade" id="how-to-listen-with-intention" tabindex="-1" aria-labelledby="how-to-listen-with-intentionLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+      
+              <div class="modal-body">
+                <img src="covers/how-to-listen-with-intention.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+                <p id="how-to-listen-with-intention_text" >"How to Listen with Intention" is a practical guide that teaches the art of active listening. Through insightful strategies and real-life examples, it empowers you to engage deeply with others, understand their perspectives, and build stronger connections. This book is essential for anyone seeking to improve communication skills and cultivate meaningful relationships by listening attentively and empathetically.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="how-to-listen-with-intention_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#how-to-listen-with-intention_btn').on("click", function(){
+                    if ($('#how-to-listen-with-intention_text').hasClass('shown')) {
+                      $('#how-to-listen-with-intention_text').removeClass('shown');
+                      $('#how-to-listen-with-intention_text span').css('display', 'block')
+                      $('#how-to-listen-with-intention_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#how-to-listen-with-intention_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#how-to-listen-with-intention_text').addClass('shown');
+                      $('#how-to-listen-with-intention_text span').css('display', 'none')
+                      $('#how-to-listen-with-intention_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#how-to-listen-with-intention_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
+               
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="books/how-to-listen-with-intention.pdf" download>
+                  <button type="button" class="btn btn-primary"><i class="bi bi-file-earmark-arrow-down"></i> Download</button>
+                </a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
       <!-- Man Watching -->
       <div class="modal fade" id="ManWatching" tabindex="-1" aria-labelledby="ManWatchingLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -374,8 +688,34 @@
 
             <div class="modal-body">
               <img src="covers/1.PNG" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-              
-             
+              <p id="ManWatching_text" >Manwatching by Desmond Morris is a study of human behavior and non-verbal communication, exploring how gestures and body language shape our interactions and relationships. Morris applies his background in zoology to decode these behaviors, offering readers a unique perspective on human social dynamics.
+                <span class="white-faith"></span>
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="ManWatching_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+              </div>
+              <script >
+                $('#ManWatching_btn').on("click", function(){
+                  if ($('#ManWatching_text').hasClass('shown')) {
+                    $('#ManWatching_text').removeClass('shown');
+                    $('#ManWatching_text span').css('display', 'block')
+                    $('#ManWatching_text').css({
+                      "height":"66px",
+                      "overflow":"hidden"
+                    });
+                    $('#ManWatching_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                  }else{
+                    $('#ManWatching_text').addClass('shown');
+                    $('#ManWatching_text span').css('display', 'none')
+                    $('#ManWatching_text').css({
+                      "height":"fit-content",
+                      "overflow":"unset"
+                    });
+                    $('#ManWatching_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                  }
+                
+                })
+              </script>
              
             </div>
             <div class="modal-footer">
@@ -389,6 +729,8 @@
         </div>
       </div>
 
+
+
        <!-- Winning body Language -->
        <div class="modal fade" id="WinningbodyLanguage" tabindex="-1" aria-labelledby="WinningbodyLanguageLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -396,6 +738,37 @@
             
             <div class="modal-body">
               <img src="covers/2.jpg" alt="" srcset="" style="width: 100%; border-radius: 10px;">
+
+              <p id="WinningbodyLanguage_text" >Mastering body language can enhance communication skills, improve influence and persuasion abilities, and strengthen relationships both personally and professionally. It offers valuable strategies for understanding and using gestures, expressions, and posture effectively, leading to increased self-awareness and career advancement opportunities. <br> Investing time in "Winning Body Language" by Mark Bowden is worthwhile for its practical insights into non-verbal communication.
+                <span class="white-faith"></span>
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="WinningbodyLanguage_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+              </div>
+              <script >
+                $('#WinningbodyLanguage_btn').on("click", function(){
+                  if ($('#WinningbodyLanguage_text').hasClass('shown')) {
+                    $('#WinningbodyLanguage_text').removeClass('shown');
+                    $('#WinningbodyLanguage_text span').css('display', 'block')
+                    $('#WinningbodyLanguage_text').css({
+                      "height":"66px",
+                      "overflow":"hidden"
+                    });
+                    $('#WinningbodyLanguage_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                  }else{
+                    $('#WinningbodyLanguage_text').addClass('shown');
+                    $('#WinningbodyLanguage_text span').css('display', 'none')
+                    $('#WinningbodyLanguage_text').css({
+                      "height":"fit-content",
+                      "overflow":"unset"
+                    });
+                    $('#WinningbodyLanguage_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                  }
+                
+                })
+              </script>
+              
+
               
             </div>
             <div class="modal-footer">
@@ -415,7 +788,34 @@
             
             <div class="modal-body">
               <img src="covers/surroundedbyidiots.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-              
+              <p id="surroundedbyidiots_text" >"Surrounded by Idiots" offers practical wisdom on understanding different personalities, helping you improve how you relate to others. It's a fun and insightful read that can change how you see and interact with the people around you.
+                <span class="white-faith"></span>
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="surroundedbyidiots_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+              </div>
+              <script >
+                $('#surroundedbyidiots_btn').on("click", function(){
+                  if ($('#surroundedbyidiots_text').hasClass('shown')) {
+                    $('#surroundedbyidiots_text').removeClass('shown');
+                    $('#surroundedbyidiots_text span').css('display', 'block')
+                    $('#surroundedbyidiots_text').css({
+                      "height":"66px",
+                      "overflow":"hidden"
+                    });
+                    $('#surroundedbyidiots_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                  }else{
+                    $('#surroundedbyidiots_text').addClass('shown');
+                    $('#surroundedbyidiots_text span').css('display', 'none')
+                    $('#surroundedbyidiots_text').css({
+                      "height":"fit-content",
+                      "overflow":"unset"
+                    });
+                    $('#surroundedbyidiots_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                  }
+                
+                })
+              </script>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -434,7 +834,34 @@
              
               <div class="modal-body">
                 <img src="covers/The-Power-of-Habit.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-                
+                <p id="The-Power-of-Habit_text" >"The Power of Habit" explores how habits shape our lives, offering practical insights to help you understand and change them. It's an eye-opening and accessible book that can empower you to create positive routines and break free from harmful ones, making it essential reading for anyone interested in personal development.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="The-Power-of-Habit_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#The-Power-of-Habit_btn').on("click", function(){
+                    if ($('#The-Power-of-Habit_text').hasClass('shown')) {
+                      $('#The-Power-of-Habit_text').removeClass('shown');
+                      $('#The-Power-of-Habit_text span').css('display', 'block')
+                      $('#The-Power-of-Habit_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#The-Power-of-Habit_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#The-Power-of-Habit_text').addClass('shown');
+                      $('#The-Power-of-Habit_text span').css('display', 'none')
+                      $('#The-Power-of-Habit_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#The-Power-of-Habit_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -453,7 +880,34 @@
              
               <div class="modal-body">
                 <img src="covers/Who-Will-Cry-When-You-Die.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-                
+                <p id="Who-Will-Cry-When-You-Die_text" >"Who Will Cry When You Die" inspires reflection on living a meaningful life, offering simple yet profound principles for personal growth and fulfillment. It's a heartfelt guide that encourages you to prioritize what truly matters and make a positive impact on those around you.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="Who-Will-Cry-When-You-Die_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#Who-Will-Cry-When-You-Die_btn').on("click", function(){
+                    if ($('#Who-Will-Cry-When-You-Die_text').hasClass('shown')) {
+                      $('#Who-Will-Cry-When-You-Die_text').removeClass('shown');
+                      $('#Who-Will-Cry-When-You-Die_text span').css('display', 'block')
+                      $('#Who-Will-Cry-When-You-Die_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#Who-Will-Cry-When-You-Die_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#Who-Will-Cry-When-You-Die_text').addClass('shown');
+                      $('#Who-Will-Cry-When-You-Die_text span').css('display', 'none')
+                      $('#Who-Will-Cry-When-You-Die_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#Who-Will-Cry-When-You-Die_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -471,7 +925,34 @@
              
               <div class="modal-body">
                 <img src="covers/The_4-Hour_Body.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-                
+                <p id="The_4-Hour_Body_text" >"The 4-Hour Body" is a comprehensive guide to optimizing your body and health, packed with practical tips and unconventional strategies. It's a groundbreaking resource that empowers you to achieve remarkable results in fitness, nutrition, and overall well-being with efficiency and effectiveness.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="The_4-Hour_Body_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#The_4-Hour_Body_btn').on("click", function(){
+                    if ($('#The_4-Hour_Body_text').hasClass('shown')) {
+                      $('#The_4-Hour_Body_text').removeClass('shown');
+                      $('#The_4-Hour_Body_text span').css('display', 'block')
+                      $('#The_4-Hour_Body_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#The_4-Hour_Body_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#The_4-Hour_Body_text').addClass('shown');
+                      $('#The_4-Hour_Body_text span').css('display', 'none')
+                      $('#The_4-Hour_Body_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#The_4-Hour_Body_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -490,7 +971,34 @@
            
             <div class="modal-body">
               <img src="covers/Why-We-Sleep.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-              
+              <p id="Why-We-Sleep_text" >"Why We Sleep" is a compelling exploration of the science behind sleep, revealing its critical role in our physical and mental health. This eye-opening book elucidates how quality sleep enhances learning, memory, and emotional stability, urging readers to prioritize rest for a healthier and more productive life.
+                <span class="white-faith"></span>
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="Why-We-Sleep_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+              </div>
+              <script >
+                $('#Why-We-Sleep_btn').on("click", function(){
+                  if ($('#Why-We-Sleep_text').hasClass('shown')) {
+                    $('#Why-We-Sleep_text').removeClass('shown');
+                    $('#Why-We-Sleep_text span').css('display', 'block')
+                    $('#Why-We-Sleep_text').css({
+                      "height":"66px",
+                      "overflow":"hidden"
+                    });
+                    $('#Why-We-Sleep_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                  }else{
+                    $('#Why-We-Sleep_text').addClass('shown');
+                    $('#Why-We-Sleep_text span').css('display', 'none')
+                    $('#Why-We-Sleep_text').css({
+                      "height":"fit-content",
+                      "overflow":"unset"
+                    });
+                    $('#Why-We-Sleep_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                  }
+                
+                })
+              </script>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -509,7 +1017,34 @@
             
             <div class="modal-body">
               <img src="covers/quiet.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-              
+              <p id="quiet_text" >"Quiet" delves into the power of introverts in a world that often celebrates extroversion. This insightful book celebrates the strengths of introverted individuals, offering valuable perspectives on leadership, creativity, and personal growth. It encourages readers to embrace their quiet nature and harness its unique strengths for success and fulfillment.
+                <span class="white-faith"></span>
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="quiet_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+              </div>
+              <script >
+                $('#quiet_btn').on("click", function(){
+                  if ($('#quiet_text').hasClass('shown')) {
+                    $('#quiet_text').removeClass('shown');
+                    $('#quiet_text span').css('display', 'block')
+                    $('#quiet_text').css({
+                      "height":"66px",
+                      "overflow":"hidden"
+                    });
+                    $('#quiet_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                  }else{
+                    $('#quiet_text').addClass('shown');
+                    $('#quiet_text span').css('display', 'none')
+                    $('#quiet_text').css({
+                      "height":"fit-content",
+                      "overflow":"unset"
+                    });
+                    $('#quiet_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                  }
+                
+                })
+              </script>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -528,7 +1063,34 @@
            
             <div class="modal-body">
               <img src="covers/So-good-they-cant-ignore-you.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-              
+              <p id="So-good-they-cant-ignore-you_text" >"So Good They Can't Ignore You" challenges conventional career advice by emphasizing skill development and mastery over passion alone. This pragmatic book advocates for building rare and valuable skills that lead to autonomy and fulfillment in your professional life. It's a thought-provoking read that encourages deliberate practice and perseverance towards creating a career you love.
+                <span class="white-faith"></span>
+              </p>
+              <div style="width: 100%; display: flex; justify-content: center;">
+                <div id="So-good-they-cant-ignore-you_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+              </div>
+              <script >
+                $('#So-good-they-cant-ignore-you_btn').on("click", function(){
+                  if ($('#So-good-they-cant-ignore-you_text').hasClass('shown')) {
+                    $('#So-good-they-cant-ignore-you_text').removeClass('shown');
+                    $('#So-good-they-cant-ignore-you_text span').css('display', 'block')
+                    $('#So-good-they-cant-ignore-you_text').css({
+                      "height":"66px",
+                      "overflow":"hidden"
+                    });
+                    $('#So-good-they-cant-ignore-you_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                  }else{
+                    $('#So-good-they-cant-ignore-you_text').addClass('shown');
+                    $('#So-good-they-cant-ignore-you_text span').css('display', 'none')
+                    $('#So-good-they-cant-ignore-you_text').css({
+                      "height":"fit-content",
+                      "overflow":"unset"
+                    });
+                    $('#So-good-they-cant-ignore-you_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                  }
+                
+                })
+              </script>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -547,7 +1109,34 @@
              
               <div class="modal-body">
                 <img src="covers/it-didnt-start-with-you.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-                
+                <p id="it-didnt-start-with-you_text" >"It Didn't Start with You" explores the impact of inherited family trauma and offers pathways to healing. Through personal stories and therapeutic insights, the book guides readers to understand and break free from patterns passed down through generations, empowering them to live more authentic and liberated lives.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="it-didnt-start-with-you_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#it-didnt-start-with-you_btn').on("click", function(){
+                    if ($('#it-didnt-start-with-you_text').hasClass('shown')) {
+                      $('#it-didnt-start-with-you_text').removeClass('shown');
+                      $('#it-didnt-start-with-you_text span').css('display', 'block')
+                      $('#it-didnt-start-with-you_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#it-didnt-start-with-you_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#it-didnt-start-with-you_text').addClass('shown');
+                      $('#it-didnt-start-with-you_text span').css('display', 'none')
+                      $('#it-didnt-start-with-you_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#it-didnt-start-with-you_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -566,7 +1155,34 @@
              
               <div class="modal-body">
                 <img src="covers/the-body-keeps-the-score.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-                
+                <p id="the-body-keeps-the-score_text" >"The Body Keeps the Score" illuminates the profound impact of trauma on both the mind and body. Through compelling research and case studies, it reveals how trauma shapes our emotions, behaviors, and physical health. This groundbreaking book offers hope and strategies for healing, emphasizing the importance of integrating mind-body approaches in therapy and self-care.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="the-body-keeps-the-score_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#the-body-keeps-the-score_btn').on("click", function(){
+                    if ($('#the-body-keeps-the-score_text').hasClass('shown')) {
+                      $('#the-body-keeps-the-score_text').removeClass('shown');
+                      $('#the-body-keeps-the-score_text span').css('display', 'block')
+                      $('#the-body-keeps-the-score_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#the-body-keeps-the-score_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#the-body-keeps-the-score_text').addClass('shown');
+                      $('#the-body-keeps-the-score_text span').css('display', 'none')
+                      $('#the-body-keeps-the-score_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#the-body-keeps-the-score_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -585,7 +1201,34 @@
              
               <div class="modal-body">
                 <img src="covers/the-fitness-mindset.webp" alt="" srcset="" style="width: 100%; border-radius: 10px;">
-                
+                <p id="the-fitness-mindset_text" >"The Fitness Mindset" provides a practical approach to achieving fitness goals by focusing on mindset and habits. It emphasizes cultivating a positive attitude towards exercise and nutrition, offering strategies to overcome obstacles and maintain long-term motivation. This empowering book encourages readers to develop a sustainable fitness routine that aligns with their lifestyle and goals.
+                  <span class="white-faith"></span>
+                </p>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                  <div id="the-fitness-mindset_btn" style="padding: 0 10px; margin-top: 10px; border-bottom: 1px dashed black; border-radius: 10px;">More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i></div>
+                </div>
+                <script >
+                  $('#the-fitness-mindset_btn').on("click", function(){
+                    if ($('#the-fitness-mindset_text').hasClass('shown')) {
+                      $('#the-fitness-mindset_text').removeClass('shown');
+                      $('#the-fitness-mindset_text span').css('display', 'block')
+                      $('#the-fitness-mindset_text').css({
+                        "height":"66px",
+                        "overflow":"hidden"
+                      });
+                      $('#the-fitness-mindset_btn').html('More <i class="bi bi-caret-down" style="margin-left: 1rem;"></i>')
+                    }else{
+                      $('#the-fitness-mindset_text').addClass('shown');
+                      $('#the-fitness-mindset_text span').css('display', 'none')
+                      $('#the-fitness-mindset_text').css({
+                        "height":"fit-content",
+                        "overflow":"unset"
+                      });
+                      $('#the-fitness-mindset_btn').html('Less <i class="bi bi-caret-up" style="margin-left: 1rem;"></i>')
+                    }
+                  
+                  })
+                </script>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -602,7 +1245,76 @@
             <h1 style="position: absolute; top: 1rem; right: 5vw; width: 75vw; color: #0D0D0D; font-weight: 900; text-align: end;">Our School's Online Library</h1>
             <img src="Untitled-1.webp" style="width: 100vw; margin-bottom: 20px;" alt="">
             <p style="padding: 10px 5vw;">Download books to read, simply by clicking on the cover. <b>HAVE FUN!</b></p>
-            <div class="books">
+            
+            <div class="books sh1">
+              <div class="book"   data-bs-toggle="modal" data-bs-target="#dont-believe-everything-you-think">
+                <div class="book_cover" style="background-image: url('covers/dont-believe-everything-you-think.webp');">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">Don't Believe Everything You Think</div>
+                  <div class="book_author">By Joseph Nguyen</div>
+                </div>
+              </div>
+
+                <div class="book" data-bs-toggle="modal" data-bs-target="#unfuck-yourself">
+                  <div class="book_cover" style="background-image: url('covers/unfuck-yourself.webp');" >
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Unfu*k Yourself</div>
+                    <div class="book_author">by Gary John Bishop</div>
+                  </div>
+                </div>
+
+                <div class="book" data-bs-toggle="modal" data-bs-target="#the-mountain-is-you">
+                  <div class="book_cover" style="background-image: url('covers/the-mountain-is-you.webp');">
+  
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">The Mountain Is You</div>
+                    <div class="book_author">by Brianna Wiest</div>
+                  </div>
+                </div>
+
+            </div>
+
+            <div class="books sh2">
+              <div class="book"   data-bs-toggle="modal" data-bs-target="#get-out-of-your-head">
+                <div class="book_cover" style="background-image: url('covers/get-out-of-your-head.webp');">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">Get Out of Your Head</div>
+                  <div class="book_author">by Jennie Allen</div>
+                </div>
+              </div>
+
+              
+
+                <div class="book" data-bs-toggle="modal" data-bs-target="#cant-hurt-me">
+                  <div class="book_cover" style="background-image: url('covers/cant-hurt-me.webp');" >
+
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">Can't Hurt Me</div>
+                    <div class="book_author">by David Goggins</div>
+                  </div>
+                </div>
+
+                <div class="book" data-bs-toggle="modal" data-bs-target="#how-to-listen-with-intention">
+                  <div class="book_cover" style="background-image: url('covers/how-to-listen-with-intention.webp');">
+  
+                  </div>
+                  <div class="book_description">
+                    <div class="book_title">How to Listen with Intention</div>
+                    <div class="book_author">by Patrick King</div>
+                  </div>
+                </div>
+
+            </div>
+
+            <div class="books sh3">
               <div class="book"   data-bs-toggle="modal" data-bs-target="#ManWatching">
                 <div class="book_cover" style="background-image: url('covers/1.PNG');">
 
@@ -637,7 +1349,7 @@
 
             </div>
 
-            <div class="books" >
+            <div class="books sh4" >
               <div class="book" data-bs-toggle="modal" data-bs-target="#The-Power-of-Habit">
                 <div class="book_cover" style="background-image: url('covers/The-Power-of-Habit.webp');">
 
@@ -671,7 +1383,7 @@
             </div>
 
 
-            <div class="books">
+            <div class="books sh5">
               <div class="book" data-bs-toggle="modal" data-bs-target="#Why-We-Sleep">
                 <div class="book_cover" style="background-image: url('covers/Why-We-Sleep.webp');">
 
@@ -703,42 +1415,41 @@
               </div>
 
             </div>
-            <!-- comingsoon -->
-            <div style="width: 100vw; display: none;" class="comingsoon">
 
-              <div class="books">
-                <div class="book" data-bs-toggle="modal" data-bs-target="#it-didnt-start-with-you">
-                  <div class="book_cover" style="background-image: url('covers/it-didnt-start-with-you.webp');">
+            <div class="books sh6">
+              <div class="book" data-bs-toggle="modal" data-bs-target="#it-didnt-start-with-you">
+                <div class="book_cover" style="background-image: url('covers/it-didnt-start-with-you.webp');">
 
-                  </div>
-                  <div class="book_description">
-                    <div class="book_title">It Didn't Start With You </div>
-                    <div class="book_author">By Mark Wolynn</div>
-                  </div>
                 </div>
-
-                <div class="book" data-bs-toggle="modal" data-bs-target="#the-body-keeps-the-score">
-                  <div class="book_cover" style="background-image: url('covers/the-body-keeps-the-score.webp');" >
-
-                  </div>
-                  <div class="book_description">
-                    <div class="book_title">The Body Keeps the Score</div>
-                    <div class="book_author">By Bessel Van Der Kolk</div>
-                  </div>
+                <div class="book_description">
+                  <div class="book_title">It Didn't Start With You </div>
+                  <div class="book_author">By Mark Wolynn</div>
                 </div>
-
-                <div class="book"  data-bs-toggle="modal" data-bs-target="#the-fitness-mindset">
-                  <div class="book_cover" style="background-image: url('covers/the-fitness-mindset.webp');">
-
-                  </div>
-                  <div class="book_description">
-                    <div class="book_title">The Fitness Mindset</div>
-                    <div class="book_author">By Brian Keane</div>
-                  </div>
-                </div>
-                
               </div>
+
+              <div class="book" data-bs-toggle="modal" data-bs-target="#the-body-keeps-the-score">
+                <div class="book_cover" style="background-image: url('covers/the-body-keeps-the-score.webp');" >
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">The Body Keeps the Score</div>
+                  <div class="book_author">By Bessel Van Der Kolk</div>
+                </div>
+              </div>
+
+              <div class="book"  data-bs-toggle="modal" data-bs-target="#the-fitness-mindset">
+                <div class="book_cover" style="background-image: url('covers/the-fitness-mindset.webp');">
+
+                </div>
+                <div class="book_description">
+                  <div class="book_title">The Fitness Mindset</div>
+                  <div class="book_author">By Brian Keane</div>
+                </div>
+              </div>
+              
             </div>
+           
+            
             <div style="width: 100vw; display: flex; justify-content: center; align-items: center; color: #0D0D0D; margin-bottom: 2rem;">
               <div id="showmore" style="display: flex; justify-content: center; align-items: center; border-bottom: #0D0D0D dashed 1px; border-top: #0D0D0D dashed 1px; border-radius: 10px; padding: 0 10px;">
                 <h3 style="font-size: 14px; margin: 0; margin-right: 1rem;">More books</h3>
@@ -746,10 +1457,35 @@
               </div>
             </div>
             <script>
-
+              var books_shown = 2;
               $('#showmore').on('click', function(){
-                $('.comingsoon').show(300);
-              })
+                  if (books_shown == 2) {
+                  
+                      $('.sh3').show(300);
+                      $('.sh3').css("display", "flex");
+                      books_shown = 3;
+             
+                  }else if (books_shown == 3) {
+               
+                      $('.sh4').show(300);
+                      $('.sh4').css("display", "flex");
+                      books_shown = 4;
+               
+                  }else if (books_shown == 4) {
+                 
+                      $('.sh5').show(300);
+                      $('.sh5').css("display", "flex");
+                      books_shown = 5;
+          
+                  }else if (books_shown == 5) {
+            
+                      $('.sh6').show(300);
+                      $('.sh6').css("display", "flex");
+                      books_shown = 6;
+                  }
+                })
+            
+             
             </script>
         </div>
         <div style="width: 100vw; position: relative;">
